@@ -1,14 +1,21 @@
 import { move } from 'react-native-redash'
-const isNotInword = offset => {
-  'worklet';
+const isNotInword =  offset => {
+  "worklet";
+  console.log(offset.order.value !== -1)
   return offset.order.value !== -1;
 };
+
 
 const byOrder = (a, b) => {
   'worklet';
   return a.order.value > b.order.value ? 1 : -1;
 };
 
+export const lastOrder = (offsets=[]) => {
+  "worklet";
+  
+  return  offsets.filter(isNotInword).length  //sort(byOrder);
+}
 
 export const reorder = (offets, from, to)=>{
     "worklet";

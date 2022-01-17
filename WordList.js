@@ -59,8 +59,10 @@ const WordList = ({children}) => {
                
                 const someWorklet = () => {
                   'worklet';
+                  console.log(offsets.filter(o => o?.order?.value !== -1).length)
                   if (offsets.filter(o => o?.order?.value !== -1).length == 0) {
                     runOnJS(setReady)(true);
+                    console.log('jjd')
                     // runOnJS(CalculateLayout)(offsets, containerWidth)
                     CalculateLayout(offsets, containerWidth)
                   }
