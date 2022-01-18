@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+//move this inside components folder
 import React, {ReactElement, useState} from 'react';
 import {View, StyleSheet, Dimensions, LayoutChangeEvent} from 'react-native';
 import {
